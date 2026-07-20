@@ -97,4 +97,5 @@ fn main() {
     draw_polygon(&mut framebuffer, &polygon5);
 
     framebuffer.render_to_file("out.png");
+    framebuffer.render_to_bmp("out.bmp");
 }
