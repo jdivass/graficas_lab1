@@ -33,4 +33,5 @@ fn main() {
     draw_polygon(&mut framebuffer, &polygon1);
 
     framebuffer.render_to_file("out.png");
+    framebuffer.render_to_bmp("out.bmp");
 }
