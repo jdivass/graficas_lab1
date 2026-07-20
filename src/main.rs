@@ -12,7 +12,6 @@ fn main() {
     let mut framebuffer = Framebuffer::new(800, 600, Color::BLACK);
     framebuffer.clear();
 
-
     let polygon1 = [
         Vector2::new(165.0, 380.0),
         Vector2::new(185.0, 360.0),
@@ -31,6 +30,19 @@ fn main() {
 
     framebuffer.set_current_color(Color::WHITE);
     draw_polygon(&mut framebuffer, &polygon1);
+
+    let polygon2 = [
+        Vector2::new(321.0, 335.0),
+        Vector2::new(288.0, 286.0),
+        Vector2::new(339.0, 251.0),
+        Vector2::new(374.0, 302.0),
+    ];
+
+    framebuffer.set_current_color(Color::BLUE);
+    fill_polygon(&mut framebuffer, &polygon2);
+
+    framebuffer.set_current_color(Color::WHITE);
+    draw_polygon(&mut framebuffer, &polygon2);
 
     framebuffer.render_to_file("out.png");
 }
